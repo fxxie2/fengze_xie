@@ -81,7 +81,6 @@
     <ul class="nav-links">
       <li><a href="#hero">About</a></li>
       <li><a href="#news">News</a></li>
-      <li><a href="#directions">Directions</a></li>
       <li><a href="#research">Research</a></li>
       <li><a href="#education">Education</a></li>
       <li><a href="#awards">Awards</a></li>
@@ -163,51 +162,23 @@
   </div>
 </section>
 
-<!-- ==================== RESEARCH DIRECTIONS ==================== -->
-<section id="directions">
-  <div class="container">
-    <h2 class="section-title">Research Directions</h2>
-    <div class="direction-tabs">
-      <button class="direction-tab active" data-direction="adaptation">Online Safe Adaptation</button>
-      <button class="direction-tab" data-direction="morphology">Morphological Learning</button>
-      <button class="direction-tab" data-direction="bioinspired">Bio-Inspired System</button>
-    </div>
-
-    <div class="direction-panel active" data-direction="adaptation">
-      <ul class="direction-list">
-        <li><a href="#proj-magic">MAGIC<sup>VFM</sup> &mdash; Meta-learning Adaptation for Ground Interaction Control with Visual Foundation Models</a> <span class="venue-badge journal">T-RO</span></li>
-        <li><a href="#proj-mlampc">Meta-Learning Augmented MPC for Disturbance-Aware Motion Planning and Control of Quadrotors</a> <span class="venue-badge journal">L-CSS</span></li>
-        <li><a href="#proj-hmac">Hierarchical Meta-learning-based Adaptive Controller</a> <span class="venue-badge conference">ICRA 2024</span></li>
-        <li><a href="#proj-mgaps">Online Policy Optimization in Unknown Nonlinear Systems</a> <span class="venue-badge conference">COLT 2024</span></li>
-        <li><a href="#proj-fne">Fast Non-Episodic Adaptive Tuning of Robot Controllers with Model-Based Online Policy Optimization</a> <span class="venue-badge preprint">Preprint</span></li>
-      </ul>
-    </div>
-
-    <div class="direction-panel" data-direction="morphology">
-      <ul class="direction-list">
-        <li><a href="#proj-msgnn">Morphological-Symmetry-Equivariant Heterogeneous Graph Neural Network for Robotic Dynamics Learning</a> <span class="venue-badge conference">L4DC 2025</span></li>
-        <li><a href="#proj-msppo">MS-PPO: Morphological-Symmetry-Equivariant Policy for Legged Robot Locomotion</a> <span class="venue-badge preprint">Preprint</span></li>
-      </ul>
-    </div>
-
-    <div class="direction-panel" data-direction="bioinspired">
-      <ul class="direction-list">
-        <li><a href="#proj-narwal">A Narwhal-Inspired Sensing-to-Control Framework for Small Fixed-Wing Aircraft</a> <span class="venue-badge conference">ICRA 2026</span></li>
-      </ul>
-    </div>
-  </div>
-</section>
-
 <!-- ==================== RESEARCH / PROJECTS ==================== -->
 <section id="research">
   <div class="container">
     <h2 class="section-title">Research</h2>
 
+    <div class="direction-tabs">
+      <button class="direction-tab active" data-direction="all">All</button>
+      <button class="direction-tab" data-direction="adaptation">Online Safe Adaptation</button>
+      <button class="direction-tab" data-direction="morphology">Morphological Learning</button>
+      <button class="direction-tab" data-direction="bioinspired">Bio-Inspired System</button>
+    </div>
+
     <!-- ---- Journal Publications ---- -->
     <h3 class="research-category">Journal Publications</h3>
 
     <!-- MAGIC (T-RO) — video + figure -->
-    <article class="project-card first-author" id="proj-magic">
+    <article class="project-card first-author" id="proj-magic" data-direction="adaptation">
       <div class="project-media project-media-stacked">
         <video autoplay muted loop playsinline>
           <source src="assets/videos/magic.mp4" type="video/mp4">
@@ -229,7 +200,7 @@
     </article>
 
     <!-- MLA-MPC (L-CSS) — image + fig8 row -->
-    <article class="project-card" id="proj-mlampc">
+    <article class="project-card" id="proj-mlampc" data-direction="adaptation">
       <div class="project-media project-media-gallery">
         <img src="assets/images/mla-mpc-diagram.png" alt="MLA-MPC block diagram" class="gallery-main" loading="lazy">
         <div class="triple-row">
@@ -253,7 +224,7 @@
     <h3 class="research-category">Conference Publications</h3>
 
     <!-- Narwhal (ICRA 2026) — video + figure -->
-    <article class="project-card first-author" id="proj-narwal">
+    <article class="project-card first-author" id="proj-narwal" data-direction="bioinspired">
       <div class="project-media project-media-stacked">
         <video autoplay muted loop playsinline data-start="48">
           <source src="assets/videos/narwal.mp4" type="video/mp4">
@@ -273,7 +244,7 @@
     </article>
 
     <!-- HMAC (ICRA 2024) — video + figure -->
-    <article class="project-card first-author" id="proj-hmac">
+    <article class="project-card first-author" id="proj-hmac" data-direction="adaptation">
       <div class="project-media project-media-stacked">
         <video autoplay muted loop playsinline data-start="73">
           <source src="assets/videos/hmac.mp4" type="video/mp4">
@@ -294,7 +265,7 @@
     </article>
 
     <!-- MS-HGNN (L4DC 2025) — gif -->
-    <article class="project-card first-author" id="proj-msgnn">
+    <article class="project-card first-author" id="proj-msgnn" data-direction="morphology">
       <div class="project-media project-media-gallery">
         <img src="assets/images/ms-gnn-arch.png" alt="MS-HGNN Architecture" class="gallery-main" loading="lazy">
         <div class="gif-row">
@@ -316,7 +287,7 @@
     </article>
 
     <!-- M-GAPS (COLT 2024) — image -->
-    <article class="project-card" id="proj-mgaps">
+    <article class="project-card" id="proj-mgaps" data-direction="adaptation">
       <div class="project-media">
         <img src="assets/images/mgaps-diagram.png" alt="Online policy optimization framework" loading="lazy">
       </div>
@@ -335,7 +306,7 @@
     <h3 class="research-category">Preprints</h3>
 
     <!-- MS-PPO (Dec 2025) — video + framework figure -->
-    <article class="project-card" id="proj-msppo">
+    <article class="project-card" id="proj-msppo" data-direction="morphology">
       <div class="project-media project-media-stacked">
         <video autoplay muted loop playsinline>
           <source src="https://lunarlab-gatech.github.io/MS-PPO/assets/videos/teaser.mp4" type="video/mp4">
@@ -355,7 +326,7 @@
     </article>
 
     <!-- Fast Non-Episodic (Jul 2025) — main figure + two below -->
-    <article class="project-card" id="proj-fne">
+    <article class="project-card" id="proj-fne" data-direction="adaptation">
       <div class="project-media project-media-gallery">
         <img src="assets/images/fne-bad-init.png" alt="Bad initialization recovery" class="gallery-main" loading="lazy">
         <div class="dual-image">

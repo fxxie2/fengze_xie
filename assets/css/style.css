@@ -370,45 +370,6 @@ section:nth-child(even) {
   color: #fff;
 }
 
-.direction-panel {
-  display: none;
-}
-
-.direction-panel.active {
-  display: block;
-}
-
-.direction-list {
-  list-style: none;
-}
-
-.direction-list li {
-  display: flex;
-  align-items: baseline;
-  gap: 10px;
-  padding: 10px 0;
-  border-bottom: 1px solid var(--color-border);
-  font-size: 0.925rem;
-  line-height: 1.5;
-}
-
-.direction-list li:last-child {
-  border-bottom: none;
-}
-
-.direction-list li a {
-  color: var(--color-text);
-  text-decoration: none;
-  transition: var(--transition);
-}
-
-.direction-list li a:hover {
-  color: var(--color-accent);
-}
-
-.direction-list .venue-badge {
-  flex-shrink: 0;
-}
 
 /* ---------- Research Category Subheadings ---------- */
 .research-category {
@@ -1147,9 +1108,4 @@ footer p {
     padding: 6px 14px;
   }
 
-  .direction-list li {
-    flex-direction: column;
-    gap: 4px;
-    font-size: 0.875rem;
-  }
 }

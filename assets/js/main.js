@@ -36,16 +36,26 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- Research direction tabs ---
+  // --- Research direction filter tabs ---
   const dirTabs = document.querySelectorAll('.direction-tab');
-  const dirPanels = document.querySelectorAll('.direction-panel');
+  const cards = document.querySelectorAll('.project-card[data-direction]');
+  const categoryHeadings = document.querySelectorAll('.research-category');
+
   dirTabs.forEach(tab => {
     tab.addEventListener('click', () => {
       const dir = tab.dataset.direction;
       dirTabs.forEach(t => t.classList.remove('active'));
-      dirPanels.forEach(p => p.classList.remove('active'));
       tab.classList.add('active');
-      document.querySelector(`.direction-panel[data-direction="${dir}"]`).classList.add('active');
+
+      if (dir === 'all') {
+        cards.forEach(c => c.style.display = '');
+        categoryHeadings.forEach(h => h.style.display = '');
+      } else {
+        cards.forEach(c => {
+          c.style.display = c.dataset.direction === dir ? '' : 'none';
+        });
+        categoryHeadings.forEach(h => h.style.display = 'none');
+      }
     });
   });
 
